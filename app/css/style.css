@@ -439,17 +439,10 @@ h6 {
   display: block;
   margin: 0 auto;
 }
-.wrap {
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  min-height: 500px;
-  top: 100%;
-}
-.wrap section,
-.wrap footer,
-.wrap nav,
-.wrap header {
+section,
+footer,
+nav,
+header {
   float: left;
   width: 100%;
   min-height: 20px;
@@ -626,6 +619,10 @@ header nav .active {
   border-bottom: dotted 1px #000;
   margin-left: 20px;
 }
+.about {
+  height: 835px;
+  position: relative;
+}
 .about h2 {
   float: left;
   width: 100%;
@@ -662,10 +659,20 @@ header nav .active {
   width: 100%;
   margin: 0;
 }
+.about .about__slider .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 475px !important;
+}
+.about .about__slider .slick-slider {
+  height: 475px !important;
+}
 .about .about__slider .about__slider_item {
   float: left;
   width: 33.333333%;
-  min-height: 455px;
+  min-height: 475px;
   position: relative;
   cursor: pointer;
 }
@@ -673,12 +680,13 @@ header nav .active {
   position: absolute;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 465px;
   top: 0px;
   left: 0px;
   padding: 15px;
   border: solid 1px #fff;
   border-radius: 8px;
+  box-shadow: 0px 5px 5px 0px #ffffff;
 }
 .about .about__slider .about__slider_item .about__slider_item_image {
   float: left;
@@ -718,16 +726,16 @@ header nav .active {
   -o-transition: all .5s;
   transition: all .5s;
 }
-.about .about__slider .about__slider_item:hover {
+.about .about__slider .about__slider_item_body:hover {
   border: solid 1px #eeeeee;
   border-radius: 8px;
   box-shadow: 0px 5px 5px 0px rgba(24, 23, 24, 0.39);
 }
-.about .about__slider .about__slider_item:hover .about__slider_item_image {
+.about .about__slider .about__slider_item_body:hover .about__slider_item_image {
   border: solid 2px #fed403;
   opacity: 1;
 }
-.about .about__slider .about__slider_item:hover p {
+.about .about__slider .about__slider_item_body:hover p {
   color: #000;
 }
 .about ul {
@@ -756,6 +764,230 @@ header nav .active {
 }
 .about ul .slick-active {
   border: solid 1px #fed403;
+}
+.line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 15px;
+  left: 0px;
+}
+.line img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
+.katalog {
+  background: #fed403;
+  min-height: 790px;
+  position: relative;
+}
+.katalog h2 {
+  float: left;
+  width: 100%;
+  margin: 30px 0 20px;
+  text-align: center;
+  font-family: 'Conv_Neuron_ExtraLight', sans-serif;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.katalog p {
+  text-align: center;
+  font-family: 'Conv_Neuron_ExtraLight_Italic', sans-serif;
+  font-size: 22px;
+  color: #656565;
+}
+.katalog .katalog__floating-block {
+  float: left;
+  margin-top: 10px;
+  height: 505px;
+  width: 100%;
+  position: relative;
+}
+.katalog .katalog__slider {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.katalog .katalog__slider .katalog__slide {
+  position: absolute;
+  display: block;
+  width: calc(100% + 40px);
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.katalog .katalog__slider .katalog__line {
+  float: left;
+  width: 100%;
+}
+.katalog .katalog__slider .katalog__item {
+  float: left;
+  width: 25%;
+  border-left: solid 20px #fed403;
+  border-right: solid 28px #fed403;
+  height: 230px;
+  position: relative;
+  margin-bottom: 28px;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_body {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  border: solid 1px #000;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0px 5px 5px 0px #fed403;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_img {
+  float: left;
+  width: 100%;
+  margin-bottom: 22px;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_img img {
+  display: block;
+  width: auto;
+  position: relative;
+  margin: 0 auto;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_title {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_title span {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: solid 1px #000;
+  font-size: 18px;
+}
+.katalog .katalog__slider .katalog__item .katalog__item_desc {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: 'Conv_Neuron_ExtraLight', sans-serif;
+  font-size: 16px;
+}
+.katalog .katalog__slider .katalog__item:hover .katalog__item_body {
+  box-shadow: 0px 5px 5px 0px rgba(24, 23, 24, 0.39);
+  background: #fff;
+}
+.katalog .katalog__slider .katalog__item:first-child {
+  margin-left: -20px;
+}
+.katalog ul {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 100px;
+  left: 0px;
+  text-align: center;
+}
+.katalog ul li {
+  display: inline-block;
+  border: solid 1px #9e9e9e;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.katalog ul li button {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  margin: 5px;
+  border-radius: 50%;
+  font-size: 0px;
+}
+.katalog ul .active button {
+  background: #fed403;
+}
+.katalog .katalog__button-block_b {
+  position: absolute;
+  display: block;
+  bottom: 15px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+}
+.katalog .katalog__button-block_b .katalog__button-block_b_item {
+  display: inline-block;
+  border: solid 10px #fed403;
+}
+.katalog .katalog__button-block_b .katalog__button-block_b_item .button {
+  background: #000;
+  color: #fff;
+  border: solid 1px #000;
+}
+.katalog .katalog__button-block_b .katalog__button-block_b_item .button:hover {
+  background: #fed403;
+  color: #000;
+}
+.katalog .line-p {
+  position: absolute;
+  display: block;
+  bottom: 48px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  height: 1px;
+  border-top: dotted 1px #000;
+}
+.teck {
+  height: 818px;
+}
+.teck h2 {
+  float: left;
+  width: 100%;
+  margin: 30px 0 20px;
+  text-align: center;
+  font-family: 'Conv_Neuron_ExtraLight', sans-serif;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.teck p {
+  text-align: center;
+  font-family: 'Conv_Neuron_ExtraLight_Italic', sans-serif;
+  font-size: 22px;
+  color: #656565;
+}
+.teck .desk {
+  font-family: 'Conv_Neuron_ExtraLight_Italic', sans-serif;
+  font-size: 16px;
+  color: #000;
+  margin-top: 55px;
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+.teck .desk .line {
+  position: absolute;
+  display: block;
+  width: 190px;
+  margin-left: -80px;
+  left: 50%;
+  bottom: 74px;
+  background: #fed403;
+  height: 4px;
+  float: left;
 }
 .slick-slider {
   position: relative;
