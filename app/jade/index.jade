@@ -3,7 +3,7 @@ html(lang="ru")
     head
         include include/head.jade
     body
-        section.topbar
+        section.topbar#scr
             .content
             
                 .topbar__floating
@@ -204,13 +204,13 @@ html(lang="ru")
                 .header__floating
                     .middle
                         nav
-                            a.active(href="#") Главная
-                            a(href="#") MicroMotion
-                            a(href="#") Каталог
-                            a(href="#") Подбор
-                            a(href="#") Инфо
-                            a(href="#") Прайс
-                            a(href="#") Прайс | Контакты
+                            a.scrl#scr.active(href="#scr") Главная
+                            a.scrl#a-scr-1(href="#scr1") MicroMotion
+                            a.scrl#a-scr-2(href="#scr2") Каталог
+                            a.scrl#a-scr-3(href="#scr3") Подбор
+                            a.scrl#a-scr-4(href="#scr4") Инфо
+                            a.scrl(href="#") Прайс
+                            a.scrl#a-scr-5(href="#scr5") Прайс | Контакты
         section.slider
             .content
                 .slider__floating
@@ -223,7 +223,7 @@ html(lang="ru")
                 span ГДЕ КУПИТЬ?  КОНТАКТЫ
                 include include/popup.jade
                 
-        section.about
+        section.about#scr1
             .content
                 h2
                     span О КОМПАНИИ MICRO MOTION
@@ -296,7 +296,7 @@ html(lang="ru")
             .line
                 img(src="img/line.png")
                 
-        section.katalog
+        section.katalog#scr2
             .content
                 h2 КАТАЛОГ ПРОДУКЦИИ MICRO MOTION
                 p Кориолисовые датчики расхода и плотности. Кориолисовы электронные преобразователи. Специализированные плотномеры и вискозиметры.
@@ -392,7 +392,7 @@ html(lang="ru")
                                         .katalog__item_img
                                             img(src="img/tovar.png")
                                         .katalog__item_title
-                                            span Пищевые, химические исп.
+                                            span Пищевые, химические исп1.
                                         .katalog__item_desc Н025, Н050, Н100, Н200, Н300 и др.
                                     
                                                              
@@ -461,10 +461,10 @@ html(lang="ru")
                                         .katalog__item_desc Н025, Н050, Н100, Н200, Н300 и др.
             ul
             
-                li.active
+                li.active#katalog-one
                     button
                             
-                li
+                li#katalog-two
                     button
             .line-p
                     
@@ -473,7 +473,7 @@ html(lang="ru")
                     a.button ПЕРЕЙТИ К СЛЕДУЮЩЕЙ СТРАНИЦЕ
         
         
-        section.teck
+        section.teck#scr3
             .content
                 h2 ПОДБОР ОБОРУДОВАНИЯ MICRO MOTION
                 p Выберите наиболее удобный способ получения информации по цене и срокам поставки.
@@ -509,7 +509,7 @@ html(lang="ru")
                             .desk__displays_num 4
                         a.button Опросный лист
                         .txt Сообщите нам основные данные процесса в опросном листе на измерение расхода, измерение плотности жидкости, измерение плотности газа, измерение вязкости
-        section.doc
+        section.doc#scr4
             .content
                 h2 ДОКУМЕНТАЦИЯ О НАС
                 p Выберите наиболее удобный способ получения информации по цене и срокам поставки.
@@ -553,7 +553,7 @@ html(lang="ru")
                                         img(src="img/doc1.jpg")
                                 
                                     .doc__elips-block__item_elips_d
-                                        span Опросный лист на датчик газа
+                                        span lol лист на датчик газа
                                         i
                 
                             .doc__elips-block__item
@@ -577,14 +577,14 @@ html(lang="ru")
                 a.sl-stick#sl-next
             ul
                     
-                li.active
+                li.active#d-doc1
                     button
 
                     
-                li
+                li#d-doc2
                     button
                     
-        section.contacts
+        section.contacts#scr5
             .content
                 h2 НАШИ КОНТАКТЫ
                 p Продажа. Услуги. Поддержка. Сотрудничество.

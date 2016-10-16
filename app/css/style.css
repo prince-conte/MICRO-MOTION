@@ -449,6 +449,10 @@ header {
   height: 100%;
   display: inline-table;
   position: relative;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 .topbar .topbar__floating .topbar_stadt {
   font-size: 18px;
@@ -472,11 +476,16 @@ header {
 }
 .topbar .topbar__floating .topbar_stadt .topbar__floating__popup {
   position: absolute;
-  display: block;
-  width: 555px;
-  height: 310px;
-  left: 0px;
-  top: 50px;
+  display: none;
+  width: 605px;
+  height: 360px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  border: solid 25px transparent;
+  left: -25px;
+  top: 12px;
   z-index: 9999999;
 }
 .topbar .topbar__floating .topbar_stadt .topbar__floating__popup .topbar__floating__popup_body {
@@ -507,6 +516,9 @@ header {
 .topbar .topbar__floating .topbar_stadt .topbar__floating__popup .topbar__floating__popup_body ul li:hover span {
   color: #fed403;
 }
+.topbar .topbar__floating .topbar_stadt:hover .topbar__floating__popup {
+  display: block;
+}
 .topbar .topbar__floating .topbar_link {
   margin-left: 30px;
   font-size: 18px;
@@ -532,11 +544,16 @@ header {
 }
 .topbar .topbar__floating .topbar_link .topbar__floating__popup {
   position: absolute;
-  display: block;
-  width: 555px;
-  height: 310px;
-  left: 0px;
-  top: 50px;
+  display: none;
+  width: 605px;
+  height: 360px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  border: solid 25px transparent;
+  left: -25px;
+  top: 12px;
   z-index: 9999999;
 }
 .topbar .topbar__floating .topbar_link .topbar__floating__popup .topbar__floating__popup_body {
@@ -592,6 +609,8 @@ header {
 }
 header {
   height: 85px;
+  background: #fff;
+  z-index: 9999999999;
 }
 header .content {
   height: 100%;
@@ -623,6 +642,11 @@ header nav a:hover {
 header nav .active {
   color: #fed403;
   border: solid 1px #fed403;
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 .slider {
   height: 665px;
@@ -678,6 +702,7 @@ header nav .active {
   background-size: contain !important;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  cursor: pointer;
 }
 .slider .slider_button span {
   padding-bottom: 3px;
@@ -686,14 +711,14 @@ header nav .active {
 }
 .slider .slider_button .slider_button__popup {
   position: absolute;
-  display: block;
-  width: 1300px;
-  height: 420px;
+  display: none;
+  width: 1350px;
+  height: 470px;
   overflow: hidden;
-  top: 60px;
-  left: 0px;
-  background: #fff;
+  top: 49px;
+  left: -26px;
   border-top-left-radius: 0px;
+  border: solid 25px transparent;
   border-bottom-left-radius: 0px;
   box-shadow: 0px 5px 13px 0px rgba(24, 23, 24, 0.27);
   z-index: 999999;
@@ -726,6 +751,7 @@ header nav .active {
   width: 100%;
   height: 100%;
   padding: 50px 15px 15px;
+  background: #fff;
 }
 .slider .slider_button .slider_button__popup .slider_button__popup__floating-block .adr {
   float: left;
@@ -737,6 +763,9 @@ header nav .active {
 }
 .slider .slider_button .slider_button__popup .slider_button__popup__floating-block .adr b {
   font-family: 'Conv_Neuron_DemiBold', sans-serif;
+}
+.slider .slider_button:hover .slider_button__popup {
+  display: block;
 }
 .about {
   height: 835px;

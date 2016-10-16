@@ -31,15 +31,25 @@ section, footer, nav, header {float: left; width: 100%; min-height: 20px;}
 
 .topbar {height: 48px; background: @colfirm;
 .content {height: 100%;}
-    .topbar__floating {float: left; width: 50%; height: 100%; display: inline-table; position: relative;
+    .topbar__floating {float: left; width: 50%; height: 100%; display: inline-table; position: relative;  .med-speed;
         .topbar_stadt {font-size: 18px; text-transform: uppercase; color: @coltxt; font-family: @fonttxt2;  display: block; float: left; cursor: pointer; 
             position: relative;
             i {opacity: 0.7; font-style: normal; display: inline-block; margin-right:5px;}
             span {display: inline-block; margin-right:5px;}
             
             
-       .topbar__floating__popup {position: absolute; display: block; width: 555px; height: 310px;
-        left:0px; top: 50px; z-index: 9999999;
+       .topbar__floating__popup {    position: absolute;
+    display: none;
+    width: 605px;
+    height: 360px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border: solid 25px transparent;
+    left: -25px;
+    top: 12px;
+    z-index: 9999999;
         .topbar__floating__popup_body {position: absolute; display: block; width: 100%; height: 100%; border: solid 3px @colfirm; background: #fff; padding: 10px;
             
             ul {float: left; width: 20%;
@@ -62,7 +72,12 @@ section, footer, nav, header {float: left; width: 100%; min-height: 20px;}
             
             
             
-        }    
+        }  
+        
+        
+        .topbar_stadt:hover {.topbar__floating__popup {display: block;} }
+        
+        
         .topbar_link { margin-left: 30px; .topbar_stadt; float: right; display: inline-block;
             i {display: inline-block; margin-right: 10px; .bgCCC; position: relative;}
             
@@ -82,7 +97,7 @@ section, footer, nav, header {float: left; width: 100%; min-height: 20px;}
     }       
 }
 
-header {height: 85px; 
+header {height: 85px;  background: #fff; z-index: 9999999999;
     .content {height: 100%;}
         .header__floating {float: left; width: 50%; height: 100%; display: inline-table;
             h1 {text-align: left; text-transform: uppercase;}}
@@ -95,6 +110,8 @@ header {height: 85px;
     
 
 }
+
+.fixed {position: fixed; top:0px; left:0px; }
 
 .slider {height: 665px; .bgCC; background: url(../img/home.jpg); position: relative;
 .content {height: 100%;}
@@ -110,14 +127,24 @@ header {height: 85px;
 .slider_button {.button; background-image: url(../img/sp.png); position: absolute; top:50%; margin-top: -65px; left:0px; font-family: @fontB; 
 background-position: top left !important;  background-repeat: no-repeat !important; background-size: contain !important;
 border-top-left-radius: 0px;
-border-bottom-left-radius: 0px;
+border-bottom-left-radius: 0px; cursor: pointer;
     
 span {padding-bottom: 3px; border-bottom: dotted 1px #000; margin-left: 20px;}
     
     
-.slider_button__popup {position: absolute; display: block; width: 1300px; height: 420px; overflow: hidden; top:60px; left:0px; background: #fff;
-border-top-left-radius: 0px;
-border-bottom-left-radius: 0px;   box-shadow: 0px 5px 13px 0px rgba(24, 23, 24, 0.27);     z-index: 999999;     
+.slider_button__popup {    position: absolute;
+    display: none;
+    width: 1350px;
+    height: 470px;
+    overflow: hidden;
+    top: 49px;
+    left: -26px;
+    
+    border-top-left-radius: 0px;
+    border: solid 25px transparent;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0px 5px 13px 0px rgba(24, 23, 24, 0.27);
+    z-index: 999999;
 .top {position: absolute; display: block; top:0px; width: 100%; height: 50px; background: @colfirm;
 .button {background-image: url(../img/sp.png); float: left;  font-family: @fontB; 
 background-position: top left !important;  background-repeat: no-repeat !important; background-size: contain !important;
@@ -129,14 +156,17 @@ span {padding-bottom: 3px; border-bottom: dotted 1px #000; margin-left: 20px;}
     
 }        
         
-.slider_button__popup__floating-block {float: left; width: 100%; height: 100%; padding: 50px 15px 15px;
+.slider_button__popup__floating-block {float: left; width: 100%; height: 100%; padding: 50px 15px 15px; background: #fff;
     .adr {float: left; width: 100%; display: block; font-size: 17px; padding: 12px 0; border-bottom: solid 1px #e9e9e9; b {font-family: @fontB;}}    
     
 } 
     
     
-}   
-}      
+} 
+}
+    
+    .slider_button:hover {.slider_button__popup{display: block;}}    
+    
 }
 
 
